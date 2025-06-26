@@ -27,13 +27,14 @@ export default async function Header() {
               src="/logo.png"
               alt="Anime Grid Logo"
               fill
+              sizes="(max-width: 480px) 48px, (max-width: 768px) 64px, 80px"
               style={{ objectFit: 'contain' }}
               priority
             />
           </Box>
           <Heading
             className={`${deliusSwashCaps.className}`}
-            fontSize={{ base: '2xl', md: '4xl', lg: '5xl' }}
+            fontSize={{ base: '1xl', md: '4xl', lg: '5xl' }}
             color={"purple.700"}
           >
             Anime Grid
