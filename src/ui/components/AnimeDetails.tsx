@@ -17,9 +17,9 @@ export default function AnimeDetails({ anime }: Props) {
       <Image
         src={anime?.bannerImage}
         alt={anime?.title?.english || anime?.title?.romaji}
-        width={800}
-        height={450}
-        style={{ borderRadius: "4px" }}
+        width={960}
+        height={540}
+        style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
       />
     )}
     <Stack direction={{ base: "column", md: "row" }} gap={{ base: 4, md: 8 }} my={4}>

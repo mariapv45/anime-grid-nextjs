@@ -22,7 +22,7 @@ export default function Modal({
           <Dialog.Content
               w="auto"
               maxW={{ base: '90vw', md: '50vw' }}
-              maxH={{ base: '80vh', md: '60vh' }}
+              maxH="80vh"
             >
             <Dialog.Header>
               <Dialog.Title>{title}</Dialog.Title>
