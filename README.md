@@ -1,3 +1,40 @@
+# Leonardo.AI Web Challenge
+
+A modern, responsive Anime Grid web app built with Next.js, Chakra UI, and Apollo Client.  
+Users can browse anime, view details in a modal, and manage their profile with persistent cookies.
+
+## 📝 Notes
+
+This is my submission for the Leonardo.AI Front-End Engineer role.
+
+- **Cookies** are used to persist user information (username and job title) across sessions without needing a backend or database. This enables a seamless and personalized experience when users return to the site.
+- **Middleware** helps protect routes by checking for the presence of the user cookie. If the cookie is missing, users are redirected to the login page. This ensures only users with a valid session can access protected pages like the anime grid.
+
+### Areas for Improvement
+
+- **Success Feedback**: Implement a toast notification to confirm successful profile submission.
+- **Error Handling**: Improve error messaging and catch unexpected failures (e.g., cookie issues, network errors).
+- **Form Validation**: Currently handled on the server using `zod`. Adding client-side validation would enhance the user experience.
+- **Server-Side Rendering (SSR)**: Explore better use of SSR or React Suspense to enhance loading performance.
+- **Notes on Authentication**: This project uses basic browser cookies to persist user information (username and job title) across sessions. While suitable for demonstration, a production-ready application should implement secure authentication and store user data in a database.
+
+## Features
+
+- **Anime Grid:** Paginated, responsive grid of anime fetched from a GraphQL API.
+- **Anime Details Modal:** Click any anime tile to view detailed info in a modal.
+- **User Profile:** Enter and persist your username and job title.
+- **Pagination:** Fast, accessible pagination with URL sync.
+- **Loading & Error States:** Skeleton grid and error alerts for smooth UX.
+- **Responsive Design:** Works great on desktop and mobile.
+- **Chakra UI v3.21:** Uses the latest Chakra UI components and patterns.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [Chakra UI](https://chakra-ui.com/) v3.21
+- [Apollo Client](https://www.apollographql.com/docs/react/)
+- [TypeScript](https://www.typescriptlang.org/)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
