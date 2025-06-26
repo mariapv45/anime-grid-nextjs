@@ -15,6 +15,7 @@ This is my submission for the Leonardo.AI Front-End Engineer role.
 - **Form Validation**: Currently handled on the server using `zod`. Adding client-side validation would enhance the user experience.
 - **Server-Side Rendering (SSR)**: Explore better use of SSR or React Suspense to enhance loading performance.
 - **UI Improvements**: Loading skeleton for modal display of anime data. Display a success message to inform users when their profile has been updated. Apply theming to ensure a cohesive and consistent visual design across the application.
+- **Testing**: Due to time constraints, tests were not included in this submission. With more time, I would add unit and integration tests — particularly around GraphQL data fetching, form submission, and error states — to improve confidence and maintainability.
 - **Notes on Authentication**: This project uses basic browser cookies to persist user information (username and job title) across sessions. While suitable for demonstration, a production-ready application should implement secure authentication and store user data in a database.
 
 ## Features
