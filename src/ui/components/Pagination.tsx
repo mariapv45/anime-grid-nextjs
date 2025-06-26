@@ -1,4 +1,4 @@
-import { ButtonGroup, IconButton, Pagination } from "@chakra-ui/react";
+import { ButtonGroup, IconButton, Pagination as ChakraPagination } from "@chakra-ui/react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 
 type Props = {
@@ -8,25 +8,25 @@ type Props = {
   setPage: (page: number) => void;
 }
 
-export default function PaginationBar({
+export default function Pagination({
   count,
   pageSize,
   currentPage,
   setPage
 }: Props) {
   return (
-    <Pagination.Root count={count} pageSize={pageSize} page={currentPage}>
+    <ChakraPagination.Root count={count} pageSize={pageSize} page={currentPage}>
       <ButtonGroup variant="ghost" size="sm">
-        <Pagination.PrevTrigger asChild>
+        <ChakraPagination.PrevTrigger asChild>
           <IconButton
             aria-label="Previous page"
             onClick={() => setPage(Math.max(1, currentPage - 1))}
           >
             <LuChevronLeft />
           </IconButton>
-        </Pagination.PrevTrigger>
+        </ChakraPagination.PrevTrigger>
 
-        <Pagination.Items
+        <ChakraPagination.Items
           render={(page) => (
             <IconButton
               key={page.value}
@@ -39,15 +39,15 @@ export default function PaginationBar({
           )}
         />
 
-        <Pagination.NextTrigger asChild>
+        <ChakraPagination.NextTrigger asChild>
           <IconButton
             aria-label="Next page"
             onClick={() => setPage(Math.min(currentPage + 1, count))}
           >
             <LuChevronRight />
           </IconButton>
-        </Pagination.NextTrigger>
+        </ChakraPagination.NextTrigger>
       </ButtonGroup>
-    </Pagination.Root>
+    </ChakraPagination.Root>
   )
 }

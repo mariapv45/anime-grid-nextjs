@@ -4,23 +4,16 @@ import { SimpleGrid, Box } from "@chakra-ui/react"
 import { useQuery } from "@apollo/client";
 import { GET_ANIME_PAGE } from "@/lib/queries"
 import type { Anime } from "@/types/queries";
+import { ITEMS_PER_PAGE } from '@/lib/constants';
 
-import PaginationBar from "./PaginationBar";
+import Pagination from "./Pagination";
 import AnimeTile from "./AnimeTile";
 import AnimeDetails from './AnimeDetails';
 import Modal from './Modal';
 import LoadingSkeleton from './LoadingSkeleton';
 import ErrorMessage from './ErrorMessage';
 
-const PAGE_SIZE = 36;
-
 export default function AnimeGrid() {
-  const { data, loading, error } = useQuery(GET_ANIME_PAGE, {
-    variables: { page: 1, perPage: PAGE_SIZE },
-  });
-
-  const totalItems = data?.Page?.pageInfo?.total || 0;
-
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -32,7 +25,11 @@ export default function AnimeGrid() {
     router.push(`${pathname}?${params.toString()}`);
   };
 
-  console.log("AnimeGrid data:", data);
+  const { data, loading, error } = useQuery(GET_ANIME_PAGE, {
+    variables: { page: currentPage, perPage: ITEMS_PER_PAGE },
+  });
+
+  const totalItems = data?.Page?.pageInfo?.total || 0;
 
   if (loading) {
     return <LoadingSkeleton />;
@@ -66,7 +63,7 @@ export default function AnimeGrid() {
         ))}
       </SimpleGrid>
       <Box mt={8} display="flex" justifyContent="right">
-        <PaginationBar count={totalItems} pageSize={PAGE_SIZE} currentPage={currentPage} setPage={setPage} />
+        <Pagination count={totalItems} pageSize={ITEMS_PER_PAGE} currentPage={currentPage} setPage={setPage} />
       </Box>
     </Box>
   );
