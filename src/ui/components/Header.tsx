@@ -1,38 +1,45 @@
-import { Box, Heading, Flex, HStack, Stack, Avatar, Text } from '@chakra-ui/react'
-import { getUserCookieValue } from '@/lib/cookies'
-import Modal from './Modal';
-import UserForm from './UserForm';
+import { Box, Heading, Flex, Stack } from '@chakra-ui/react';
+import Image from 'next/image';
+import { getUserCookieValue } from '@/lib/cookies';
+import { deliusSwashCaps } from '@/ui/fonts'
+import UserInfo from './UserInfo';
+;
 
-export async function Header() {
+export default async function Header() {
   const userInfo = await getUserCookieValue();
   const {username, jobTitle} = userInfo || {};
 
   return (
-    <Box as="header" py={4} px={6} bg="gray.100" boxShadow="sm">
+    <Box
+      as="header"
+      bg="purple.100" 
+      boxShadow="sm"
+      position="sticky"
+      zIndex="sticky"
+      top={0}
+      px={6}
+      py={4}
+    >
       <Flex align="center" justify="space-between">
-        <Heading size="lg">Leonardo AI Web Challenge</Heading>
-        <HStack gap="3">
-          <Avatar.Root>
-            <Avatar.Fallback />
-            <Modal
-              title="Edit Profile"
-              trigger={
-                <Avatar.Image src="/profile-avatar.png" cursor="pointer" />
-              }
-            >
-              <UserForm buttonLabel="Save" username={username} jobTitle={jobTitle} />
-            </Modal>
-            
-          </Avatar.Root>
-          {!!username && !!jobTitle && (
-            <Stack gap="0">
-              <Text fontWeight="medium">{username}</Text>
-              <Text color="fg.muted" textStyle="sm">
-                {jobTitle}
-              </Text>
-            </Stack>
-          )}
-        </HStack>
+        <Stack gap={0} direction="row" align={"center"}>
+          <Box position="relative" boxSize={{ base: '48px', md: '80px' }}>
+            <Image
+              src="/logo.png"
+              alt="Anime Grid Logo"
+              fill
+              style={{ objectFit: 'contain' }}
+              priority
+            />
+          </Box>
+          <Heading
+            className={`${deliusSwashCaps.className}`}
+            fontSize={{ base: '2xl', md: '4xl', lg: '5xl' }}
+            color={"purple.700"}
+          >
+            Anime Grid
+          </Heading>
+        </Stack>
+        <UserInfo username={username} jobTitle={jobTitle} />
       </Flex>
     </Box>
   )

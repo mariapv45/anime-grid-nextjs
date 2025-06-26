@@ -1,11 +1,17 @@
-import { Header } from "@/ui/components/Header"
-import AnimeGrid from "@/ui/components/AnimeGrid"
+import { Flex } from "@chakra-ui/react";
+import Header from "@/ui/components/Header";
+import Footer from "@/ui/components/Footer";
 
-export default function layout() {
+type Props = {
+  children: React.ReactNode;
+}
+
+export default function layout({ children }: Props) {
   return (
-    <>
-    <Header />
-    <AnimeGrid />
-    </>
+    <Flex direction="column" minH="100vh">
+      <Header />
+      {children}
+      <Footer />
+    </Flex>
   )
 }

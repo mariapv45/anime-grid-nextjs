@@ -1,7 +1,7 @@
-
+import AnimeGrid from "@/ui/components/AnimeGrid";
 
 export default function Page() {
   return (
-    <div>Information Page</div>
-  )
+      <AnimeGrid />
+  );
 }

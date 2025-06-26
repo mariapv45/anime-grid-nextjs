@@ -1,4 +1,3 @@
-import '@/ui/globals.css';
 import type { Metadata } from "next";
 import { geistSans, geistMono } from '@/ui/fonts';
 import { Providers } from './providers';

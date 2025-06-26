@@ -12,21 +12,25 @@ export default function Modal({
   children,
 }: Props) {
   return (
-    <Dialog.Root size="md" placement="center" motionPreset="slide-in-bottom">
+    <Dialog.Root placement="center" motionPreset="slide-in-bottom">
       <Dialog.Trigger asChild>
         {trigger}
       </Dialog.Trigger>
       <Portal>
         <Dialog.Backdrop />
         <Dialog.Positioner>
-          <Dialog.Content>
+          <Dialog.Content
+              w="auto"
+              maxW={{ base: '90vw', md: '50vw' }}
+              maxH={{ base: '80vh', md: '60vh' }}
+            >
             <Dialog.Header>
               <Dialog.Title>{title}</Dialog.Title>
               <Dialog.CloseTrigger asChild>
                 <CloseButton size="sm" />
               </Dialog.CloseTrigger>
             </Dialog.Header>
-            <Dialog.Body>
+            <Dialog.Body overflow="auto">
               {children}
             </Dialog.Body>
           </Dialog.Content>
