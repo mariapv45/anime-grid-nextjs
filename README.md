@@ -5,8 +5,6 @@
 ## 📝 Notes
 
 This is my submission for the Leonardo.AI Front-End Engineer role.
-Anime Grid is a modern, responsive web app where users can browse anime, check out details in a modal, and manage their profile. 
-It’s built with Next.js, Chakra UI, and Apollo Client, with simple cookie-based persistence for user info.
 
 - **Cookies** are used to persist user information (username and job title) across sessions without needing a backend or database. This enables a seamless and personalized experience when users return to the site.
 - **Middleware** helps protect routes by checking for the presence of the user cookie. If the cookie is missing, users are redirected to the login page. This ensures only users with a valid session can access protected pages like the anime grid.
@@ -24,9 +22,7 @@ It’s built with Next.js, Chakra UI, and Apollo Client, with simple cookie-base
 - **Anime Grid:** Paginated, responsive grid of anime fetched from a GraphQL API.
 - **Anime Details Modal:** Click any anime tile to view detailed info in a modal.
 - **User Profile:** Enter and persist your username and job title.
-- **Pagination:** Fast, accessible pagination with URL sync.
-- **Loading & Error States:** Skeleton grid and error alerts for smooth UX.
-- **Responsive Design:** Works great on desktop and mobile.
+- **Responsive Design**
 - **Chakra UI v3.21:** Uses the latest Chakra UI components and patterns.
 
 ## Tech Stack
