@@ -1,21 +1,22 @@
-# Leonardo.AI Web Challenge
+# Leonardo.AI Web Challenge v3.5
 
-A modern, responsive Anime Grid web app built with Next.js, Chakra UI, and Apollo Client.  
-Users can browse anime, view details in a modal, and manage their profile with persistent cookies.
+**Link to Project**: leonardoai-web-challenge.vercel.app
 
 ## 📝 Notes
 
 This is my submission for the Leonardo.AI Front-End Engineer role.
+Anime Grid is a modern, responsive web app where users can browse anime, check out details in a modal, and manage their profile. 
+It’s built with Next.js, Chakra UI, and Apollo Client, with simple cookie-based persistence for user info.
 
 - **Cookies** are used to persist user information (username and job title) across sessions without needing a backend or database. This enables a seamless and personalized experience when users return to the site.
 - **Middleware** helps protect routes by checking for the presence of the user cookie. If the cookie is missing, users are redirected to the login page. This ensures only users with a valid session can access protected pages like the anime grid.
 
 ### Areas for Improvement
 
-- **Success Feedback**: Implement a toast notification to confirm successful profile submission.
-- **Error Handling**: Improve error messaging and catch unexpected failures (e.g., cookie issues, network errors).
+- **Error Handling**: Improve error handling and catch unexpected failures (e.g., cookie issues, network errors).
 - **Form Validation**: Currently handled on the server using `zod`. Adding client-side validation would enhance the user experience.
 - **Server-Side Rendering (SSR)**: Explore better use of SSR or React Suspense to enhance loading performance.
+- **UI Improvements**: Loading skeleton for modal display of anime data. Display a success message to inform users when their profile has been updated. Apply theming to ensure a cohesive and consistent visual design across the application.
 - **Notes on Authentication**: This project uses basic browser cookies to persist user information (username and job title) across sessions. While suitable for demonstration, a production-ready application should implement secure authentication and store user data in a database.
 
 ## Features
