@@ -1,6 +1,6 @@
 # Leonardo.AI Web Challenge v3.5
 
-**Link to Project**: leonardoai-web-challenge.vercel.app
+**Link to Project**: [Web Challenge](https://leonardoai-web-challenge.vercel.app)
 
 ## 📝 Notes
 
