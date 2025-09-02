@@ -1,6 +1,6 @@
 # Anime Grid
 
-**Link to Project**: [Web Challenge](https://leonardoai-web-challenge.vercel.app)
+**Link to Project**: [Anime Grid](anime-grid-nextjs.vercel.app)
 
 ## 📝 Notes
 - **Cookies** are used to persist user information (username and job title) across sessions without needing a backend or database. This enables a seamless and personalized experience when users return to the site.
