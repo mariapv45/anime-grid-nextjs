@@ -1,11 +1,8 @@
-# Leonardo.AI Web Challenge v3.5
+# Anime Grid
 
 **Link to Project**: [Web Challenge](https://leonardoai-web-challenge.vercel.app)
 
 ## 📝 Notes
-
-This is my submission for the Leonardo.AI Front-End Engineer role.
-
 - **Cookies** are used to persist user information (username and job title) across sessions without needing a backend or database. This enables a seamless and personalized experience when users return to the site.
 - **Middleware** helps protect routes by checking for the presence of the user cookie. If the cookie is missing, users are redirected to the login page. This ensures only users with a valid session can access protected pages like the anime grid.
 
