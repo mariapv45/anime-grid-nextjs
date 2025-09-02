@@ -4,10 +4,10 @@ import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Leonardo.AI Web Challenge',
-    default: 'Leonardo.AI Web Challenge',
+    template: '%s | Anime Grid',
+    default: 'Anime Grid',
   },
-  description: 'Leonardo.AI Web Team Coding Challenge: Submission by Maria Vargas.',
+  description: 'Anime Grid',
 };
 
 export default function RootLayout({
